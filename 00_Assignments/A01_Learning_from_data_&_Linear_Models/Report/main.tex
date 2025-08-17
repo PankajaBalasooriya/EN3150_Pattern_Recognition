@@ -1,0 +1,218 @@
+\documentclass[12pt]{article}
+
+% ============================================================================
+% PACKAGE IMPORTS - Generally no need to modify unless adding new features
+% ============================================================================
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{booktabs, array}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{cite}
+
+% ============================================================================
+% CUSTOMIZATION SECTION - EDIT THESE VARIABLES FOR YOUR ASSIGNMENT
+% ============================================================================
+% Replace the values below with your specific assignment details:
+
+\newcommand{\universityname}{University of Moratuwa}                    % Your university name
+\newcommand{\departmentname}{Department of Electronic and Telecommunication Engineering}  % Your department
+\newcommand{\modulecode}{ENxxxx}                                        % Course/module code
+\newcommand{\modulename}{Module Name}                    % Course/module name
+\newcommand{\assignmentname}{Assignment title}  % Your assignment title
+
+
+% Page setup
+% Page margins - adjust as needed (left, right, top, bottom)
+\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm}
+
+% Header and footer setup
+\pagestyle{fancy}
+\fancyhf{}                        % Clear all header and footer fields
+\fancyhead[L]{\modulecode\ \modulename}      % Left header: Module code and name
+\fancyhead[R]{\assignmentname}               % Right header: Assignment name
+\fancyfoot[C]{\thepage}                      % Center footer: Page number
+
+
+% ============================================================================
+% DOCUMENT CONTENT STARTS HERE
+% ============================================================================
+\begin{document}
+
+% ============================================================================
+% TITLE PAGE - Modify student information below
+% ============================================================================
+\begin{titlepage}
+    \centering
+    \vspace*{1cm}
+
+    {\huge\textbf{\universityname}}\\[1cm]
+
+    {\Large\textbf{\departmentname}}\\[0.5cm]
+
+    \includegraphics[width=0.5\textwidth]{resources/University_of_Moratuwa_logo.png}\\[1cm]
+
+    {\large\textbf{\modulecode – \modulename}}\\[1cm]
+
+    {\LARGE\textbf{\assignmentname}}\\[1cm]
+    
+    \vspace{0.3cm}
+    
+    % ========================================================================
+    % STUDENT INFORMATION - CHOOSE ONE OPTION BELOW
+    % ========================================================================
+    
+    % OPTION 1: FOR GROUP ASSIGNMENTS (Comment out Option 2 if using this)
+    % \textbf{Group Members:}\\
+    % \begin{tabular}{ll}
+    %     Name 1 & Index Number 1 \\          % Replace with actual names and index numbers
+    %     Name 2 & Index Number 2 \\          % Add more rows if needed
+    %     Name 3 & Index Number 3 \\          % Remove rows if fewer group members
+    %     % Name 4 & Index Number 4 \\        % Uncomment and add more rows as needed
+    % \end{tabular}\\[1cm]
+    
+    % OPTION 2: FOR INDIVIDUAL ASSIGNMENTS (Comment out Option 1 if using this)
+    % Uncomment the lines below and comment out the "Group Members" section above
+    \textbf{Submitted by:}\\
+    \begin{tabular}{ll}
+       \textbf{Name:} & Your Name \\
+       \textbf{Index Number:} & Your Index Number \\
+    \end{tabular}\\[1cm]
+    
+    % Automatic date - will show today's date when compiled
+    \textbf{Date:} \today
+
+    \vfill
+\end{titlepage}
+
+% ============================================================================
+% TABLE OF CONTENTS - Automatically generated
+% ============================================================================
+\newpage
+\tableofcontents
+\newpage
+
+
+% ============================================================================
+% MAIN CONTENT - REPLACE WITH YOUR ACTUAL ASSIGNMENT CONTENT
+% ============================================================================
+
+% Use \section{} for main sections, \subsection{} for subsections, 
+% and \subsubsection{} for further subdivisions
+
+\section{Sample Section Title}
+This is a sample paragraph introducing the section content.  
+You can describe the overall idea, provide background information, and define the scope of discussion\cite{rayleigh1896sound}.
+% Note: \cite{} is used for referencing. Make sure to add your references to references.bib file
+
+\subsection{Sample Subsection Title}
+This is an example of a subsection.  
+You can use bullet points or paragraphs to elaborate:
+\begin{itemize}
+    \item First key idea in this subsection.
+    \item Second key idea with additional explanation.
+    \item Third point highlighting a detail.
+\end{itemize}
+
+\subsubsection{Sample Subsubsection Title}
+Here is an example of a subsubsection.  
+It is used when you need an extra level of detail.  
+For example:
+\begin{enumerate}
+    \item Step-by-step explanation.
+    \item Specific data or figures.
+    \item Important notes.
+\end{enumerate}
+
+\section{Another Sample Section}
+This section can be used for additional content, analysis, or discussion.  
+You can include:
+\begin{itemize}
+    \item Figures (see Figure~\ref{fig:sample_fig})
+    \item Tables
+    \item Equations
+\end{itemize}
+
+% ============================================================================
+% FIGURE EXAMPLE - How to include images and figures
+% ============================================================================
+\begin{figure}[H]       % [H] forces the figure to appear exactly here
+    \centering
+    % Uncomment the line below and replace with your actual image file
+    %\includegraphics[width=0.5\textwidth]{resources/sample_image.png}
+
+    % The line below creates a placeholder box - remove it when using real images
+    \fbox{\rule{0pt}{2in}\rule{2in}{0pt}}
+    \caption{Example placeholder figure.}
+    \label{fig:sample_fig}
+\end{figure}
+
+% ============================================================================
+% CONCLUSION SECTION
+% ============================================================================
+\section*{Conclusion}   % * creates unnumbered section
+\addcontentsline{toc}{section}{Conclusion}
+This is the conclusion section.  
+Summarize the main points covered, key takeaways, and any recommendations for future work.
+
+% ============================================================================
+% REFERENCES/BIBLIOGRAPHY SECTION
+% ============================================================================
+% Make sure you have a 'references.bib' file with your bibliography entries
+% Example entry in references.bib:
+% @article{rayleigh1896sound,
+%   title={The theory of sound},
+%   author={Rayleigh, Lord},
+%   year={1896},
+%   publisher={Macmillan}
+% }
+\newpage
+\addcontentsline{toc}{section}{References}    % Add References to table of contents
+\bibliographystyle{IEEEtran}                  % IEEE citation style (common in engineering)
+\bibliography{references}                      % References from references.bib file
+
+\end{document}
+
+% ============================================================================
+% ADDITIONAL HELPFUL TIPS:
+% ============================================================================
+%
+% 1. ADDING IMAGES:
+%    - Create a 'resources' folder in your project directory
+%    - Place image files there (PNG, JPG, PDF formats work well)
+%    - Use \includegraphics[width=0.5\textwidth]{resources/your_image.png}
+%
+% 2. MATHEMATICS:
+%    - Inline math: $x = y + z$
+%    - Display math: \[x = y + z\]
+%    - Numbered equations: \begin{equation} x = y + z \end{equation}
+%
+% 3. TABLES:
+%    \begin{table}[H]
+%    \centering
+%    \begin{tabular}{|c|c|c|}
+%    \hline
+%    Header 1 & Header 2 & Header 3 \\
+%    \hline
+%    Data 1   & Data 2   & Data 3   \\
+%    \hline
+%    \end{tabular}
+%    \caption{Your table caption}
+%    \label{tab:your_label}
+%    \end{table}
+%
+% 4. CROSS-REFERENCES:
+%    - Reference figures: Figure~\ref{fig:your_label}
+%    - Reference tables: Table~\ref{tab:your_label}
+%    - Reference sections: Section~\ref{sec:your_label}
+%
+% ============================================================================
